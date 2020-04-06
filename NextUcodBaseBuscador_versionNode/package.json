@@ -1,0 +1,24 @@
+{
+  "name": "nextucodbasebuscador_versionnode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://BackendBuscador_JaimeGaitan\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Dgithub.com/jagaitanr/BackendBuscador_JaimeGaitan.git"
+  },
+  "keywords": [
+    "'buscador'",
+    "'nodejs'",
+    "'ajax'"
+  ],
+  "author": "Jaime Gaitan",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.17.1"
+  }
+}
