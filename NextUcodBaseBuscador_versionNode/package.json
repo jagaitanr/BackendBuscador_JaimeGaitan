@@ -19,6 +19,10 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",
-    "express": "^4.17.1"
+    "express": "^4.14.0",
+    "httpdispatcher": "^2.0.1",
+    "jquery": "^3.1.1",
+    "socket.io": "^1.7.2",
+    "socket.io-client": "^1.7.2"
   }
 }

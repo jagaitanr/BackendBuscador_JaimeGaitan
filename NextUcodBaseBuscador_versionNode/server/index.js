@@ -1,29 +1,32 @@
-var bodyParser = require('body-parser'),
-    http       = require('http'),
-    express    = require('express'),
-    socketio = require('path'),
-    path = require ('path'),
-    filtro = require('./filtros');
+
+var bodyParser = require('body-parser')
+    ,http = require('http')
+    ,express = require('express')
+    ,socketio = require('socket.io')
+    ,path = require('path')
+    ,buscador = require('./Buscador');
 
 
+var port = port = process.env.PORT || 3000
+   ,app_root = __dirname
+   ,app = express()
+   ,Server = http.createServer(app)
+   ,io = socketio(Server);
 
 
-var port        = process.env.PORT || 3000,
-    app        = express(),
-    Server     = http.createServer(app)
+ app.use(bodyParser.json());
+ app.use(bodyParser.urlencoded({extended: true}));
+ app.use(express.static(path.join(app_root, '../public')))
+ app.use('/Buscador', buscador)
 
-    app.use(bodyParser.json())
-    app.use(bodyParser.urlencoded({extended: true}))
-    app.use(express.static('public'))
-    app.use('/filtros', filtro)
+ Server.listen(port, function(){
+    console.log("Servidor funcionando en el puerto: " + port);
+    });
 
-  Server.listen(port, function(){
-    console.log("Server is running on port: " + port)
-  })
+      io.on('Connection', function(socket){
+      socket.on('userJoin',(user)=>{
 
-io.on('Connection', function(socket){
-  socket.on ('userJoin', (user)=>{
-    socket.user = user;
-    socket.broadcast.emit('userJoin', user);
-  })
-})
+     socket.user = user;
+     socket.broadcast.emit('userJoin', user);
+   })
+ })
