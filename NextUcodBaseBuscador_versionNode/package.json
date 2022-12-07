@@ -18,8 +18,8 @@
   "author": "Jaime Gaitan",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0",
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
     "httpdispatcher": "^2.0.1",
     "jquery": "^3.1.1",
     "socket.io": "^1.7.2",
